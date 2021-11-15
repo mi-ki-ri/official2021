@@ -1,6 +1,6 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://mi-ki-ri.github.io/official2021/'
 languageCode = 'en-us'
-title = 'Mikirihassha P Official 2021'
+title = 'Mikirihassha P Official 2021~'
 theme = "2021"
 publishDir = "docs"
 
