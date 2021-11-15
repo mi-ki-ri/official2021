@@ -1,0 +1,72 @@
+{{ define "main" }}
+<main class="row gt-5">
+
+    {{$pages := (where .Pages "Type" "in" "posts")}}
+
+    {{ $paginator := .Paginate $pages 10 }}
+    {{ with $paginator }}
+    {{ range $paginator.Pages }}
+    <article class="bg-light shadow-sm round col-6 p-3 pt-5 my-3" style="height: 150px;">
+        <h3 class="fs-6 text-truncate">
+            <span class="fs-6">
+                {{ $burl := .Site.BaseURL }}
+                {{ range .Params.categories }}
+                <a href="{{ $burl }}categories/{{ lower . }}">
+                    【{{ . }}】
+                </a>
+
+                {{ end }}
+            </span>
+            <a href="{{.Permalink}}">
+                {{ .Title }}
+            </a>
+            <span class="text-black-50 fs-6">
+                {{ .Date }}
+            </span>
+
+        </h3>
+        <section style="min-height: 1rem;" class="text-truncate">
+            {{ .Summary }}
+        </section>
+
+        <section>
+            {{ $burl := .Site.BaseURL }}
+            Tags: {{ range .Params.tags }}
+            <a href="{{ $burl }}tags/{{ lower . }}">
+                {{ . }}
+            </a>
+            {{ end }}
+        </section>
+    </article>
+    {{ end }}
+    {{ end }}
+
+
+    {{ $burl := .Site.BaseURL }}
+
+    {{ with $paginator.HasPrev }}
+    <article class="bg-light shadow-sm round col-6 p-3 pt-5 my-3" style="height: 150px;">
+
+        {{ with $paginator.HasPrev }}
+        <a class="text-center d-block fs-4" href="{{ $burl }}{{ $paginator.Prev.URL }}">
+            Prev
+        </a>
+        {{ end }}
+    </article>
+    {{ end }}
+
+    {{ $burl := .Site.BaseURL }}
+
+    {{ with $paginator.HasNext }}
+    <article class="bg-light shadow-sm round col-6 p-3 pt-5 my-3" style="height: 150px;">
+
+        {{ with $paginator.HasNext }}
+        <a class="text-center d-block fs-4" href="{{ $burl }}{{ $paginator.Next.URL }}">
+            Next
+        </a>
+        {{ end }}
+    </article>
+    {{ end }}
+
+</main>
+{{end}}

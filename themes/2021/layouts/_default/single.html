@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main class="row gt-5">
+
+    
+    {{ $burl := .Site.BaseURL }}
+
+    <article class="bg-light shadow-sm round col p-3 pt-5 my-3" style="min-height: 150px;">
+        <h3 class="fs-6 text-truncate">
+            <span class="fs-6">
+                {{ $burl := .Site.BaseURL }}
+                {{ range .Params.categories }}
+                <a href="{{ $burl }}categories/{{ lower . }}">
+                    【{{ . }}】
+                </a>
+
+                {{ end }}
+            </span>
+            <span class="fs-4">{{ .Title }}</span>
+                
+            <span class="text-black-50 fs-6">
+                {{ .Date }}
+            </span>
+
+        </h3>
+        <section style="min-height: 1rem;">
+            {{ .Content }}
+        </section>
+
+        <section>
+            {{ $burl := .Site.BaseURL }}
+            Tags: {{ range .Params.tags }}
+            <a href="{{ $burl }}tags/{{ lower . }}">
+                {{ . }}
+            </a>
+            {{ end }}
+        </section>
+    </article>
+    
+</main>
+{{end}}

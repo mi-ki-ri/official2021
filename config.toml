@@ -1,0 +1,12 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Mikirihassha P Official 2021'
+theme = "2021"
+publishDir = "docs"
+
+[params]
+    subtitle = "Music, Book, Songwriting"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
