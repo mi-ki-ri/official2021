@@ -17,9 +17,10 @@
             </span>
             <span class="fs-4">{{ .Title }}</span>
                 
-            <span class="text-black-50 fs-6">
-                {{ .Date }}
-            </span>
+           <span class="text-black-50 fs-6">
+               {{ time.Format "2006-01-02" .Date }}
+           </span>
+
 
         </h3>
         <section style="min-height: 1rem;">
