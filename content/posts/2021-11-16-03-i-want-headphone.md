@@ -1,6 +1,6 @@
 ---
 title: "ヘッドフォンがほしい"
-date: "2021-11-16"
+date: "2021-11-16 10:00:00"
 categories: ["music"]
 tags: ["music", "music-equipment"]
 draft: false
