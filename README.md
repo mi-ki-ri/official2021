@@ -17,3 +17,5 @@ draft: false
 categoriesは一つで、tagsの冒頭の単語を選ぶ。
 
 見出しはレベル4から。
+
+ファイル名、　`YYYY-mm-dd-01-{title}.md`
