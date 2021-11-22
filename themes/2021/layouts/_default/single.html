@@ -35,6 +35,14 @@
             </a>
             {{ end }}
         </section>
+        <section>
+            {{ $burl := .Site.BaseURL }}
+            Keywords: {{ range .Params.keywords }}
+            <a href="{{ $burl }}keywords/{{ lower . }}">
+                {{ . }}
+            </a>
+            {{ end }}
+        </section>
     </article>
     
 </main>
