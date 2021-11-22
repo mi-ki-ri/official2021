@@ -3,6 +3,7 @@ title: "ヘッドフォンがほしい"
 date: 2021-11-16
 categories: ["music"]
 tags: ["music", "music-equipment"]
+keywords: ["流れ","環境","ヘッド","SONY","かけ","インストール","状態","あと","モニターヘッドフォン","クリーン","リスニング","電気","フォン","プロジェクト","具合","Audio","Mac","作り","Technica","興味"]
 draft: false
 ---
 
