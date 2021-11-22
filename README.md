@@ -11,6 +11,7 @@ title: ""
 date: ""
 categories: [""]
 tags: ["", ""]
+keywords: ["", ""]
 draft: false
 ```
 

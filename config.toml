@@ -9,3 +9,4 @@ theme = "2021"
 [taxonomies]
     tag = "tags"
     category = "categories"
+    keyword = "keywords"
